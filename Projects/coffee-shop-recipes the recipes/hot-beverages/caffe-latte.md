@@ -5,11 +5,12 @@
 ## Ingredients
 
 - 1 oz espresso roast
-- 1 cup whole milk
+- 1 cup almond milk 
 - Milk frother
 - Optional sweetener
 
 ## How to Make Caffè Latte
+
 
 ### Step 1
 
