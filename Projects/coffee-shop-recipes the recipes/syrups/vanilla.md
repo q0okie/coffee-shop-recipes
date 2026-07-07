@@ -7,6 +7,7 @@
 - 1 cup sugar
 - 1 cup water
 - 1 vanilla bean (or 1 1/2 Tbsp vanilla extract)
+- 1 pinch of salt
 
 ## How to Make
 
@@ -16,7 +17,7 @@
 
 ### Step 2
 
-- Add the sugar, water and vanilla bean (if using) to a small saucepan. Bring to a boil and then reduce heat to a simmer for 5 minutes.
+- Add the sugar, water and vanilla bean (if using) and a pinch of salt to a small saucepan. Bring to a boil and then reduce heat to a simmer for 5 minutes.
 
 ### Step 3
 
