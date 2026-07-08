@@ -1,3 +1,3 @@
-let greeting: string = 'Hello Typescript!';
+let greeting: string = 'Hello Typescript! in watch';
 
 console.log(greeting);
