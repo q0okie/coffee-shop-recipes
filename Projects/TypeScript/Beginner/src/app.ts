@@ -23,11 +23,15 @@ function printMovieInfo(movieTitle:string, yearReleased?:number, ...actor:string
     let movieReview: string|number = getReview(movieTitle)
     
     console.log(`${movieReview}`);
-    
+
     for(const name of actor) {
         console.log (` ${actor}`);
     }
 }
 
 let movie1 = printMovieInfo('A New Hope')
+
+const logMessage = (message:string) => console.log(message);
+
+logMessage('Yes');
 
