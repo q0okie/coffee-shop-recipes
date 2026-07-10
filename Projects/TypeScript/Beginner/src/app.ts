@@ -1,5 +1,9 @@
 
+function getBooksRead(name: string, ...bookIDs:number[]) {};
 
+//Ellipsis behind last parameter designates rest parameter for multi entry argument
+
+let books = getBooksRead('Freud',2,5);
 
 function createCustomer(name:string, age?:number) { };
 
