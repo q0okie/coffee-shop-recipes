@@ -1,23 +1,33 @@
 
-function getBooksRead(name: string, ...bookIDs:number[]) {};
-
-//Ellipsis behind last parameter designates rest parameter for multi entry argument
-
-let books = getBooksRead('Freud',2,5);
-
-function createCustomer(name:string, age?:number) { };
-
-function getBookTitle(title:string = 'The C Programming Language') { };
-
-function reccBookTitle(title:string = mostPopularBook) { };
-
-var mostPopularBook:string;
-
-function getReview(a:string) {};
-
 const movieTitle: string = 'A New Hope';
 
-let movieReview: string|number = getReview(movieTitle);
 
-console.log(`Movie title: ${movieTitle}`);
-console.log(`${movieReview}`);
+
+function getReview(a:string) {
+    if (movieTitle== 'A New Hope') {
+        return 'An Instant Classic!';
+    }
+    else {
+        return Math.floor(Math.random()*10);
+    }
+}
+
+function printMovieInfo(movieTitle:string, yearReleased?:number, ...actor:string[]) {
+
+    console.log(`Movie title: ${movieTitle}`);
+
+    if (yearReleased){
+        console.log(`Year released: ${yearReleased}`);
+    }
+
+    let movieReview: string|number = getReview(movieTitle)
+    
+    console.log(`${movieReview}`);
+    
+    for(const name of actor) {
+        console.log (` ${actor}`);
+    }
+}
+
+let movie1 = printMovieInfo('A New Hope')
+
