@@ -1,3 +1,9 @@
+function getAllMovies() {
+    return [
+        {title: 'A New Hope', director: 'George Lucas', yearReleased: 1977, streaming: true},
+        {title: 'Return of the Sith', director: 'George Lucas', yearReleased: 1977, streaming: true}
+    ];
+}
 
 const movieTitle: string = 'A New Hope';
 
@@ -35,3 +41,29 @@ const logMessage = (message:string) => console.log(message);
 
 logMessage('Yes');
 
+function getMovieTitle(director:string): string[];
+function getMovieTitle(director:string, streaming: boolean): string[];
+function getMovieTitle(director:string, streaming?: boolean): string[]{
+
+    const allMovies = getAllMovies();
+    const searchResults:string[] = [];
+
+    if (streaming !==undefined) {
+        for (let movie of allMovies) {
+            if (movie.director === director && movie.streaming === streaming) {
+                searchResults.push(movie.title);
+            } else {
+                break;
+            }
+        } 
+    }else {
+                for (let movie of allMovies) {
+                    if (movie.director ===director) {
+                        searchResults.push(movie.title);
+                    }
+                }
+            }
+    return searchResults;
+}
+let movies: string[] = getMovieTitle('George Lucas');
+movies.forEach(title=>console.log(title))
