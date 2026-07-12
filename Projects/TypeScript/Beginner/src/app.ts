@@ -84,5 +84,9 @@ let probableDuck = {
     swim: () => console.log ('swimming like a duck'),
     quack:() => console.log('quacking like a duck')
 }
-function flyingOverWater(bird:Duck) { }
+function flyingOverWater(bird:Duck) { 
+    bird.walk();
+    bird.swim();
+    bird.quack();
+}
 flyingOverWater (probableDuck);
