@@ -53,29 +53,29 @@ function getMovieTitle(director:string, streaming?: boolean): string[]{
     const allMovies = getAllMovies();
     const searchResults:string[] = [];
 
-        for (let movie of allMovies) {
-            if (movie.title === 'A New Hope') {
-                let review = getReview(movie.title);
-                console.log (review)
-            }
-            if (streaming !== undefined) {
-                if (movie.director === director && movie.streaming === streaming) {
+    // There should only be ONE loop scanning the movies
+    for (let movie of allMovies) {
+        
+        if (movie.title === 'A New Hope') {
+            let review = getReview(movie.title);
+            console.log(review);
+        }
+
+        if (streaming !== undefined) {
+            if (movie.director === director && movie.streaming === streaming) {
                 searchResults.push(movie.title);
             } 
         } 
-    else {
-                for (let movie of allMovies) {
-                    if (movie.director === director) {
-                        searchResults.push(movie.title);
-                    }
-                }
+        else {
+            // FIXED: Removed the inner loop. Just check the current movie!
+            if (movie.director === director) {
+                searchResults.push(movie.title);
             }
         }
+    }
             
     return searchResults;
 }
+
 let movies: string[] = getMovieTitle('George Lucas');
 movies.forEach(title=>console.log(title))
-
-
-
