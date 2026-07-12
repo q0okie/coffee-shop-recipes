@@ -67,3 +67,22 @@ function getMovieTitle(director:string, streaming?: boolean): string[]{
 }
 let movies: string[] = getMovieTitle('George Lucas');
 movies.forEach(title=>console.log(title))
+
+// Interfaces are contracts that define types
+
+// Compiler will enforce the rules of interface
+
+// Duck typing helps you reuse shapes of typing to set a standard for what to expect
+
+interface Duck {
+    walk: () => void;
+    swim:() => void;
+    quack: () => void;
+}
+let probableDuck = {
+    walk: () => console.log('walking like a duck'),
+    swim: () => console.log ('swimming like a duck'),
+    quack:() => console.log('quacking like a duck')
+}
+function flyingOverWater(bird:Duck) { }
+flyingOverWater (probableDuck);
